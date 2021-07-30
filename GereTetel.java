@@ -21,8 +21,10 @@ public class GereTetel {
   /**
    * @param args the command line arguments
    */
+  static final int MAX_NUM_PRIMES = 10000000;
+
   public static void main(String[] args) throws IOException {
-    int prim[] = new int[10000000];
+    int prim[] = new int[MAX_NUM_PRIMES];
     prim[0] = 2;
     prim[1] = 3;
     int pf = 2;
