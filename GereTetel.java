@@ -15,6 +15,9 @@ import java.io.PrintWriter;
  */
 public class GereTetel {
 
+  private void printProgress() {
+  }
+
   /**
    * @param args the command line arguments
    */
