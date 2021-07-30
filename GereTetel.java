@@ -22,6 +22,7 @@ public class GereTetel {
    * @param args the command line arguments
    */
   static final int MAX_NUM_PRIMES = 10000000;
+  static final int MAX_PRIME = 1000000;
 
   public static void main(String[] args) throws IOException {
     int prim[] = new int[MAX_NUM_PRIMES];
@@ -48,7 +49,7 @@ public class GereTetel {
     boolean h = true;
     boolean hh = true;
 
-    while (k < 1000000) {
+    while (k < MAX_PRIME) {
 
       if (max < prim[g]) {
         ik = i; // muvelet
