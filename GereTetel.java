@@ -30,20 +30,16 @@ public class GereTetel {
   static final int MAX_NUM_PRIMES = 10000000;
   static final int MAX_PRIME = 1000000;
 
-  public static void main(String[] args) throws IOException {
-    int prim[] = new int[MAX_NUM_PRIMES];
-    prim[0] = 2;
-    prim[1] = 3;
+  private static int fun1(int prim[]) {
+    int maxi = 2;
+    int prime = 3;
+    int i = 2;
     int pf = 2;
     int numPrimes = 2;
     int j = 1;
-    int i = 2;
     int g = 0;
-    int prime = 3;
     int max = 2;
-    int maxi = 2;
     int ik = i;
-
     while (prime < MAX_PRIME) {
 
       if (max < prim[g]) {
@@ -85,10 +81,17 @@ public class GereTetel {
       i = i + 1;
 
     }
+    return i;
+  }
 
-    maxi = i;
-    prime = 0;
-    i = 0;
+  public static void main(String[] args) throws IOException {
+    int prim[] = new int[MAX_NUM_PRIMES];
+    prim[0] = 2;
+    prim[1] = 3;
+
+    int maxi = fun1(prim);
+    int prime = 0;
+    int i = 0;
     System.out.println("Osszetett szamok kisyelektalasa");
     while (prim[prime] < 1000) {
       if (prim[i] % prim[prime] == 0 && prim[prime] != prim[i]) {
