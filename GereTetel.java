@@ -16,14 +16,14 @@ import java.io.PrintWriter;
  */
 public class GereTetel {
 
-  static private int printProgress = 100000;
+  static private int printProgressPrimeLimit = 100000;
 
-  static private void printProgress(int k, int o) {
-    if (k > printProgress) {
-      int start = k / 1000;
+  static private void printProgress(int prime, int numPrimes) {
+    if (prime > printProgressPrimeLimit) {
+      int start = prime / 1000;
       if (start < 1000) // This is should be removed.
-        System.out.println(start + ".000 ig eddig fut le =  " + o);
-      printProgress += 100000;
+        System.out.println(start + ".000 ig eddig fut le =  " + numPrimes);
+      printProgressPrimeLimit += 100000;
     }
   }
 
