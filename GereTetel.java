@@ -84,7 +84,7 @@ public class GereTetel {
     return i;
   }
 
-  private static void fun2(int prim[], int maxi) throws IOException {
+  private static int fun2(int prim[], int maxi) throws IOException {
     int prime = 0;
     int i = 0;
     System.out.println("Osszetett szamok kisyelektalasa");
@@ -108,20 +108,7 @@ public class GereTetel {
       i++;
     }
     maxi = maxi + 1;
-
-    String p;
-
-    FileWriter fw = new FileWriter("prims.txt");
-    PrintWriter pw = new PrintWriter(fw);
-    i = 0;
-    while (i <= maxi) {
-      p = String.valueOf(prim[i]);
-      pw.println(p);
-      i++;
-    }
-    fw.close();
-    pw.close();
-
+    return maxi;
   }
 
   public static void main(String[] args) throws IOException {
@@ -130,7 +117,20 @@ public class GereTetel {
     prim[1] = 3;
 
     int maxi = fun1(prim);
-    fun2(prim, maxi);
+    maxi = fun2(prim, maxi);
+
+    String p;
+
+    FileWriter fw = new FileWriter("prims.txt");
+    PrintWriter pw = new PrintWriter(fw);
+    int i = 0;
+    while (i <= maxi) {
+      p = String.valueOf(prim[i]);
+      pw.println(p);
+      i++;
+    }
+    fw.close();
+    pw.close();
   }
 
 }
