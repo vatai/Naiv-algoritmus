@@ -84,12 +84,7 @@ public class GereTetel {
     return i;
   }
 
-  public static void main(String[] args) throws IOException {
-    int prim[] = new int[MAX_NUM_PRIMES];
-    prim[0] = 2;
-    prim[1] = 3;
-
-    int maxi = fun1(prim);
+  private static void fun2(int prim[], int maxi) throws IOException {
     int prime = 0;
     int i = 0;
     System.out.println("Osszetett szamok kisyelektalasa");
@@ -127,6 +122,15 @@ public class GereTetel {
     fw.close();
     pw.close();
 
+  }
+
+  public static void main(String[] args) throws IOException {
+    int prim[] = new int[MAX_NUM_PRIMES];
+    prim[0] = 2;
+    prim[1] = 3;
+
+    int maxi = fun1(prim);
+    fun2(prim, maxi);
   }
 
 }
