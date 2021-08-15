@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 // package gere.tetel;
+// javac GereTetel.java && java GereTetel >| stdout && (md5sum stdout && md5sum prims.txt) | diff gold -
+
 
 import java.io.FileWriter;
 import java.io.IOException;
