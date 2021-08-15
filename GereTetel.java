@@ -27,9 +27,6 @@ public class GereTetel {
     }
   }
 
-  /**
-   * @param args the command line arguments
-   */
   static final int MAX_NUM_PRIMES = 10000000;
   static final int MAX_PRIME = 1000000;
 
