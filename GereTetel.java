@@ -42,7 +42,6 @@ public class GereTetel {
     int prime = 3;
     int max = 2;
     int maxi = 2;
-    int ii = 0;
     int ik = i;
 
     while (prime < MAX_PRIME) {
@@ -70,8 +69,7 @@ public class GereTetel {
         while (ik < maxi) {
 
           if (prim[ik] % max == 0 && max != prim[ik]) {
-
-            ii = ik;
+            int ii = ik;
             while (ii < maxi) {
               prim[ii] = prim[ii + 1];
               ii++;
@@ -95,7 +93,7 @@ public class GereTetel {
     while (prim[prime] < 1000) {
       if (prim[i] % prim[prime] == 0 && prim[prime] != prim[i]) {
 
-        ii = i;
+        int ii = i;
         while (ii < maxi) {
           prim[ii] = prim[ii + 1];
           ii++;
