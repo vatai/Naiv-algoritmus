@@ -6,7 +6,6 @@
 // package gere.tetel;
 // javac GereTetel.java && java GereTetel >| stdout && (md5sum stdout && md5sum prims.txt) | diff gold -
 
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -17,7 +16,15 @@ import java.io.PrintWriter;
  */
 public class GereTetel {
 
-  private void printProgress() {
+  static private int printProgress = 100000;
+
+  static private void printProgress(int k, int o) {
+    if (k > printProgress) {
+      int start = k / 1000;
+      if (start < 1000) // This is should be removed.
+        System.out.println(start + ".000 ig eddig fut le =  " + o);
+      printProgress += 100000;
+    }
   }
 
   /**
@@ -41,16 +48,6 @@ public class GereTetel {
     int ii = 0;
     int ik = i;
 
-    boolean a = true;
-    boolean b = true;
-    boolean c = true;
-    boolean d = true;
-    boolean e = true;
-    boolean f = true;
-    boolean gg = true;
-    boolean h = true;
-    boolean hh = true;
-
     while (k < MAX_PRIME) {
 
       if (max < prim[g]) {
@@ -59,44 +56,7 @@ public class GereTetel {
         o++;
         // System.out.println(prim[i]);
         k = prim[i];
-
-        if (k > 100000 && a) {
-          System.out.println("100.000 ig eddig fut le =  " + o);
-          a = false;
-        }
-        if (k > 200000 && b) {
-          System.out.println("200.000 ig eddig fut le =  " + o);
-          b = false;
-        }
-        if (k > 300000 && c) {
-          System.out.println("300.000 ig eddig fut le =  " + o);
-          c = false;
-        }
-        if (k > 400000 && d) {
-          System.out.println("400.000 ig eddig fut le =  " + o);
-          d = false;
-        }
-        if (k > 500000 && e) {
-          System.out.println("500.000 ig eddig fut le =  " + o);
-          e = false;
-        }
-        if (k > 600000 && f) {
-          System.out.println("600.000 ig eddig fut le =  " + o);
-          f = false;
-        }
-        if (k > 700000 && gg) {
-          System.out.println("700.000 ig eddig fut le =  " + o);
-          gg = false;
-        }
-        if (k > 800000 && h) {
-          System.out.println("800.000 ig eddig fut le =  " + o);
-          h = false;
-        }
-        if (k > 900000 && hh) {
-          System.out.println("900.000 ig eddig fut le =  " + o);
-          hh = false;
-        }
-
+        printProgress(k, o);
         g = g + 1;
       } else {
 
