@@ -35,25 +35,25 @@ public class GereTetel {
     prim[0] = 2;
     prim[1] = 3;
     int pf = 2;
-    int o = 2;
+    int numPrimes = 2;
     int j = 1;
     int i = 2;
     int g = 0;
-    int k = 3;
+    int prime = 3;
     int max = 2;
     int maxi = 2;
     int ii = 0;
     int ik = i;
 
-    while (k < MAX_PRIME) {
+    while (prime < MAX_PRIME) {
 
       if (max < prim[g]) {
         ik = i; // muvelet
         prim[i] = pf + prim[g];
-        o++;
+        numPrimes++;
         // System.out.println(prim[i]);
-        k = prim[i];
-        printProgress(k, o);
+        prime = prim[i];
+        printProgress(prime, numPrimes);
         g = g + 1;
       } else {
 
@@ -89,11 +89,11 @@ public class GereTetel {
     }
 
     maxi = i;
-    k = 0;
+    prime = 0;
     i = 0;
     System.out.println("Osszetett szamok kisyelektalasa");
-    while (prim[k] < 1000) {
-      if (prim[i] % prim[k] == 0 && prim[k] != prim[i]) {
+    while (prim[prime] < 1000) {
+      if (prim[i] % prim[prime] == 0 && prim[prime] != prim[i]) {
 
         ii = i;
         while (ii < maxi) {
@@ -106,8 +106,8 @@ public class GereTetel {
       }
       if (i == maxi) {
 
-        i = k;
-        k++;
+        i = prime;
+        prime++;
       }
       i++;
     }
